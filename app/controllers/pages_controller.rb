@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
     def home
-        arr = BreedAPI.breeds
-        puts arr
+        @breeds = BreedAPI.breeds.collect { |b| b.name }
     end
 end

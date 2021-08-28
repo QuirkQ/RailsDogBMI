@@ -1,1 +1,11 @@
 <h1>YEAH</h1>
+
+<%= form_tag("/dog_info", method: "post") do %>
+  <%= label_tag(:breed, "Provide your dogs information:") %>
+  <%= select_tag(:breed, options_for_select(@breeds)) %>
+  <%= label_tag(:height, "Height:") %>
+  <%= number_field_tag(:height, 'height') %>
+  <%= label_tag(:weight, "Weight:") %>
+  <%= number_field_tag('weight') %>
+  <%= submit_tag("Search") %>
+<% end %>

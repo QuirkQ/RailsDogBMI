@@ -43,7 +43,7 @@ class BreedAPI
 
     def self.int_get_breeds
         uri = URI('https://api.thedogapi.com/v1/breeds')
-        params = { api_key: '' }
+        params = { api_key: ENV['DOG_API_KEY'] }
         uri.query = URI.encode_www_form(params)
 
         res = Net::HTTP.get_response(uri)
@@ -55,7 +55,7 @@ class BreedAPI
         if @@breeds.empty?
             uri = URI('https://api.thedogapi.com/v1/breeds/')
             params = { 
-                api_key: '',
+                api_key: ENV['DOG_API_KEY'],
                 search: breed_name
             }
             uri.query = URI.encode_www_form(params)
