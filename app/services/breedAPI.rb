@@ -1,10 +1,9 @@
 require 'uri'
 require 'net/http'
 require 'json'
-require './breed'
+require './app/services/breed'
 require "erb"
 include ERB::Util
-require 'pry'
 
 class BreedAPI
     @@breeds = Array.new()

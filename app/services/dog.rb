@@ -1,4 +1,4 @@
-require './breedAPI'
+require './app/services/breedbreedAPI'
 
 class Dog
     attr_reader :name, :age, :weight, :height, :breed
