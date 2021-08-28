@@ -32,7 +32,3 @@ class Dog
         BreedAPI.get_breed(breed_name)
     end
 end
-
-BreedAPI.refresh_breeds()
-d = Dog.new("John", 5, "Afghan Hound", 24, 66)
-binding.pry
