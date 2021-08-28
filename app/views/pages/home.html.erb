@@ -1,5 +1,5 @@
 <h1>YEAH</h1>
-
+<span class="badge badge-secondary">Thanks Yaro! It works!</span> 
 <%= form_tag("/dog_info", method: "post") do %>
   <%= label_tag(:breed, "Provide your dogs information:") %>
   <%= select_tag(:breed, options_for_select(@breeds)) %>
