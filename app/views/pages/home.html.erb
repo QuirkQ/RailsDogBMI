@@ -1,11 +1,19 @@
-<h1>YEAH</h1>
-<span class="badge badge-secondary">Thanks Yaro! It works!</span> 
-<%= form_tag("/dog_info", method: "post") do %>
-  <%= label_tag(:breed, "Provide your dogs information:") %>
-  <%= select_tag(:breed, options_for_select(@breeds)) %>
-  <%= label_tag(:height, "Height:") %>
-  <%= number_field_tag(:height, 'height') %>
-  <%= label_tag(:weight, "Weight:") %>
-  <%= number_field_tag('weight') %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div class="container-sm">
+    <%= form_tag("/dog_info", method: "post", class: 'row g-3') do %>
+        <div class='col-12'>
+            <%= label_tag(:breed, "Provide your dogs information:", class: 'form-label') %>
+            <%= select_tag(:breed, options_for_select(@breeds), class: 'form-select') %>
+        </div>
+        <div class='col-md-6'>
+            <%= label_tag(:height, "Height:", class: 'form-label') %>
+            <%= number_field_tag(:height, 'height', class: 'form-control') %>
+        </div>
+        <div class='col-md-6'>
+            <%= label_tag(:weight, "Weight:", class: 'form-label') %>
+            <%= number_field_tag(:weight, 'weight', class: 'form-control') %>
+        </div>
+        <div class='col-12'>
+            <%= submit_tag("Search", class: 'btn btn-primary') %>
+        </div>
+    <% end %>
+</div>
